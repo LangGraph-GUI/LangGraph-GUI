@@ -1,0 +1,25 @@
+{
+  "name": "langgraph-gui-app",
+  "version": "0.2.0",
+  "description": "Electron and Docker wrapper for frontend and backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "win": {
+      "icon": "build/icon.ico"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^31.2.1",
+    "electron-builder": "^24.13.3"
+  }
+}

@@ -1,2 +1,3 @@
 # LangGraph-GUI-App
-Docker wrapper for frontend and backend
+
+Electron and Docker wrapper for frontend and backend
