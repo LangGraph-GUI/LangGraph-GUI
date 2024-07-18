@@ -8,6 +8,7 @@ services:
       - "127.0.0.1:3000:3000"
     depends_on:
       - backend
+    network_mode: "host"
 
   backend:
     build:
@@ -16,9 +17,11 @@ services:
       - "127.0.0.1:5000:5000"
     depends_on:
       - ollama
+    network_mode: "host"
 
   ollama:
     build:
       context: ./ollama
     ports:
       - "127.0.0.1:11434:11434"
+    network_mode: "host"
