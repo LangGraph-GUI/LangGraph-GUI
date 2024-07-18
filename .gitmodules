@@ -1,6 +1,10 @@
 [submodule "LangGraph-GUI-backend"]
 	path = LangGraph-GUI-backend
-	url = https://github.com/LangGraph-GUI/LangGraph-GUI-backend
+	url = ../LangGraph-GUI-backend
 [submodule "LangGraph-GUI"]
 	path = LangGraph-GUI
-	url = https://github.com/LangGraph-GUI/LangGraph-GUI
+	url = ../LangGraph-GUI
+[submodule "examples"]
+	path = examples
+	url = ../examples.git
+	branch = main
