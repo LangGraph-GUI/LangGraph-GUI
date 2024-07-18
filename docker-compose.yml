@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./LangGraph-GUI
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./LangGraph-GUI-backend
+    ports:
+      - "127.0.0.1:5000:5000"
+    depends_on:
+      - ollama
+
+  ollama:
+    build:
+      context: ./ollama
+    ports:
+      - "127.0.0.1:11434:11434"

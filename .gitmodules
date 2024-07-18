@@ -1,0 +1,6 @@
+[submodule "LangGraph-GUI-backend"]
+	path = LangGraph-GUI-backend
+	url = https://github.com/LangGraph-GUI/LangGraph-GUI-backend
+[submodule "LangGraph-GUI"]
+	path = LangGraph-GUI
+	url = https://github.com/LangGraph-GUI/LangGraph-GUI
