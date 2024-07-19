@@ -3,7 +3,7 @@ version: '3'
 services:
   frontend:
     build:
-      context: ./LangGraph-GUI
+      context: ./LangGraph-GUI-frontend
     ports:
       - "127.0.0.1:3000:3000"
     depends_on:
