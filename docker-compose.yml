@@ -6,8 +6,6 @@ services:
       context: ./LangGraph-GUI-frontend
     ports:
       - "127.0.0.1:3000:3000"
-    depends_on:
-      - backend
     network_mode: "host"
 
   backend:
