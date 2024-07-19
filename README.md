@@ -36,17 +36,13 @@ docker compose up
 Once the containers are up and running, you can access the application at [http://localhost:3000](http://localhost:3000).
 
 ### Electron Wrapper
-If you don't like browser, you can use our electron wrapper.
-To run the Electron wrapper, use the following command:
+If you don't like use browser, you can use electron wrapper:
 
+* To run the Electron wrapper
 ```bash
 npm start
 ```
-
-### Building the Application
-
-To build electron application as a standalone app, run:
-
+* Building the Application
 ```bash
 npm run build
 ```
