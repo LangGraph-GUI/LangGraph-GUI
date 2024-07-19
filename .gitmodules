@@ -2,8 +2,8 @@
 	path = LangGraph-GUI-backend
 	url = ../LangGraph-GUI-backend
 [submodule "LangGraph-GUI"]
-	path = LangGraph-GUI
-	url = ../LangGraph-GUI
+	path = LangGraph-GUI-frontend
+	url = ../LangGraph-GUI-frontend
 [submodule "examples"]
 	path = examples
 	url = ../examples.git
