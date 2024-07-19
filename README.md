@@ -7,7 +7,8 @@ LangGraph-GUI-App is an Electron and Docker-based application that provides a us
 ## Prerequisites
 
 Before you start, make sure you have the following software installed on your system:
- 
+
+- Ubuntu related Linux (ex: Mint)
 - nv-docker (for running ollama)
 - Docker Compose
 - (Optional for electron)[npm](https://www.npmjs.com/)
