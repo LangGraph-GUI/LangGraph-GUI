@@ -2,7 +2,9 @@
 
 LangGraph-GUI-App is an Electron and Docker-based application that provides a user-friendly graphical interface for interacting with [LangGraph-GUI-frontend](https://github.com/LangGraph-GUI/LangGraph-GUI-frontend) and [LangGraph-GUI-backend](https://github.com/LangGraph-GUI/LangGraph-GUI-backend) and LocalLLM such Ollama.
 
-![](https://https://langgraph-gui.github.io/cover.webp)
+![](https://langgraph-gui.github.io/cover.webp)
+
+For more infomation, please see official site: [LangGraph-GUI.github.io](https://LangGraph-GUI.github.io)
 
 ## Prerequisites
 
@@ -11,7 +13,7 @@ Before you start, make sure you have the following software installed on your sy
 - Ubuntu related Linux (ex: Mint)
 - nv-docker (for running ollama)
 - Docker Compose
-- (Optional for electron)[npm](https://www.npmjs.com/)
+- (Optional for electron) npm
 
 
 ## Getting Started
