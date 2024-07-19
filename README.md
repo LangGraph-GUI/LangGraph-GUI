@@ -1,6 +1,8 @@
 # LangGraph-GUI-App
 
-LangGraph-GUI-App is an Electron and Docker-based application that provides a user-friendly graphical interface for interacting with LangGraph. This guide will walk you through the setup and usage of the application.
+LangGraph-GUI-App is an Electron and Docker-based application that provides a user-friendly graphical interface for interacting with [LangGraph-GUI-frontend](https://github.com/LangGraph-GUI/LangGraph-GUI) and [LangGraph-GUI-backend](https://github.com/LangGraph-GUI/LangGraph-GUI-backend).
+
+![](https://raw.githubusercontent.com/LangGraph-GUI/LangGraph-GUI/main/cover.webp)
 
 ## Prerequisites
 
