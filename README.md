@@ -27,7 +27,7 @@ git clone --recurse-submodules https://github.com/LangGraph-GUI/LangGraph-GUI-Ap
 cd LangGraph-GUI-App
 ```
 
-### Docker Setup
+### Docker Compose Setup
 
 Build and start the Docker containers:
 
