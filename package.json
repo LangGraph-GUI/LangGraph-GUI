@@ -1,6 +1,6 @@
 {
   "name": "langgraph-gui-app",
-  "version": "0.2.0",
+  "version": "0.5.7",
   "description": "Electron and Docker wrapper for frontend and backend",
   "main": "index.js",
   "scripts": {
