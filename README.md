@@ -8,7 +8,7 @@ For more infomation, please see official site: [LangGraph-GUI.github.io](https:/
 
 ## Prerequisites
 
-Before you start, make sure you have the following software installed on your system:
+Before you start, make sure you have the following software installed on your Linux:
 
 - Ubuntu related Linux (ex: Mint)
 - nv-docker (for running ollama)
