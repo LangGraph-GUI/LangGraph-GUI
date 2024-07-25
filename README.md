@@ -15,6 +15,7 @@ Before you start, make sure you have the following software installed on your sy
 - Docker Compose
 - (Optional for electron) npm
 
+*(If Windows user, please see [LangGraph GUI Setup on Windows](https://langgraph-gui.github.io/Others/Windows))*
 
 ## Getting Started
 
