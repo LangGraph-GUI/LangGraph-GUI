@@ -24,8 +24,8 @@ Before you start, make sure you have the following software installed on your Li
 First, clone the repository and its submodules:
 
 ```bash
-git clone --recurse-submodules https://github.com/LangGraph-GUI/LangGraph-GUI-App.git
-cd LangGraph-GUI-App
+git clone --recurse-submodules https://github.com/LangGraph-GUI/LangGraph-GUI.git
+cd LangGraph-GUI
 ```
 
 ### Docker Compose Setup
