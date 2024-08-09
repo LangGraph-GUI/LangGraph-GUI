@@ -3,18 +3,18 @@ version: '3'
 services:
   frontend:
     build:
-      context: ./LangGraph-GUI-frontend
+      context: ./frontend
     ports:
       - "127.0.0.1:3000:3000"
     network_mode: "host"
 
   backend:
     build:
-      context: ./LangGraph-GUI-backend
+      context: ./backend
     ports:
       - "127.0.0.1:5000:5000"
     volumes:
-      - ./LangGraph-GUI-backend/src/workspace:/app/src/workspace
+      - ./backend/src/workspace:/app/src/workspace
     network_mode: "host"
 
   ollama:
