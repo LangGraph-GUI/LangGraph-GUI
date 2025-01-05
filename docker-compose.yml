@@ -6,7 +6,11 @@ services:
       - "127.0.0.1:3000:3000"
     volumes:
       - ./frontend/src/:/app/src/
-    network_mode: "host"
+      - ./frontend/package.json:/app/package.json
+      - ./frontend/tailwind.config.js:/app/tailwind.config.js
+      - ./frontend/postcss.config.js:/app/postcss.config.js
+    networks:
+      - shared-network
 
   backend:
     build:
@@ -15,11 +19,23 @@ services:
       - "127.0.0.1:5000:5000"
     volumes:
       - ./backend/src/:/app/src/
-    network_mode: "host"
+    networks:
+      - shared-network
+      - app-network
 
   ollama:
     build:
       context: ./ollama
+    environment:
+      OLLAMA_HOST: 0.0.0.0:13666
     ports:
-      - "127.0.0.1:11434:11434"
-    network_mode: "host"
+      - "127.0.0.1:13666:13666"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+  shared-network:
+    external: true
