@@ -1,9 +1,9 @@
 [submodule "LangGraph-GUI-backend"]
 	path = backend
-	url = ../LangGraph-GUI-backend-flask
+	url = ../LangGraph-GUI-backend
 [submodule "LangGraph-GUI-frontend"]
 	path = frontend
-	url = ../LangGraph-GUI-reactflow
+	url = ../LangGraph-GUI-frontend
 [submodule "examples"]
 	path = examples
 	url = ../examples.git
