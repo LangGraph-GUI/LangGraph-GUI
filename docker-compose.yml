@@ -1,11 +1,11 @@
-version: '3'
-
 services:
   frontend:
     build:
       context: ./frontend
     ports:
       - "127.0.0.1:3000:3000"
+    volumes:
+      - ./frontend/src/:/app/src/
     network_mode: "host"
 
   backend:
@@ -14,7 +14,7 @@ services:
     ports:
       - "127.0.0.1:5000:5000"
     volumes:
-      - ./backend/src/workspace:/app/src/workspace
+      - ./backend/src/:/app/src/
     network_mode: "host"
 
   ollama:

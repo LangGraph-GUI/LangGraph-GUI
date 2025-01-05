@@ -20,7 +20,10 @@ RUN chmod +x ./init_ollama.sh
 RUN ./init_ollama.sh
 
 # Expose the port ollama will use
-EXPOSE 11434
+# EXPOSE 11434
+
+# Set the environment variable for ollama
+ENV OLLAMA_HOST=0.0.0.0:11434
 
 # Final command to start the ollama server
 CMD ["ollama", "serve"]
