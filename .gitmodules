@@ -1,6 +1,6 @@
 [submodule "LangGraph-GUI-backend"]
 	path = backend
-	url = ../LangGraph-GUI-backend
+	url = ../LangGraph-GUI-backend-flask
 [submodule "LangGraph-GUI-frontend"]
 	path = frontend
 	url = ../LangGraph-GUI-reactflow
