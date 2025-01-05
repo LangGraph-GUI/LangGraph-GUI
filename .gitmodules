@@ -3,7 +3,7 @@
 	url = ../LangGraph-GUI-backend
 [submodule "LangGraph-GUI-frontend"]
 	path = frontend
-	url = ../LangGraph-GUI-frontend
+	url = ../LangGraph-GUI-reactflow
 [submodule "examples"]
 	path = examples
 	url = ../examples.git
