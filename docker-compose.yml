@@ -30,6 +30,13 @@ services:
       OLLAMA_HOST: 0.0.0.0:13666
     ports:
       - "127.0.0.1:13666:13666"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     networks:
       - app-network
 

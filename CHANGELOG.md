@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Feature
 
+- New node format: ext, this can extend for dynamic parsing
+- New node type: INFO
 - New logic frontend, backend,
 - support multi user if using nginx, example at `nginx/nginx.conf`
 
