@@ -1,21 +1,21 @@
 # LangGraph-GUI
 
-LangGraph-GUI-App is an Electron and Docker-based application that provides a user-friendly graphical interface for interacting with [LangGraph-GUI-frontend](https://github.com/LangGraph-GUI/LangGraph-GUI-frontend) and [LangGraph-GUI-backend](https://github.com/LangGraph-GUI/LangGraph-GUI-backend) and LocalLLM such Ollama.
+LangGraph-GUI is an user-friendly graphical interface for interacting with reactflow frontend and fastAPI backend using LLM such ollama or other api key.
 
-For more infomation, please see official site: [LangGraph-GUI.github.io](https://LangGraph-GUI.github.io)
+For more infomation, please see doc: [LangGraph-GUI.github.io](https://LangGraph-GUI.github.io)
 
 ![](https://langgraph-gui.github.io/cover.webp)
 
 ## Prerequisites
 
-Before you start, make sure you have the following software installed on your Linux:
+For Docker user, before you start, make sure you have the following software installed on your Linux:
 
 - Ubuntu related Linux (ex: Mint)
-- nv-docker (for running ollama)
-- Docker Compose
+- Docker Compose Env
+- nv-docker (optional for running ollama)
 - (Optional for electron) npm
 
-*(If Windows user, please see [LangGraph GUI Setup on Windows](https://langgraph-gui.github.io/Others/Windows))*
+For Windows user, please see [LangGraph GUI Setup on Windows](https://langgraph-gui.github.io/Others/Windows)
 
 ## Getting Started
 
@@ -40,13 +40,17 @@ docker compose up
 Once the containers are up and running, you can access the application at [http://localhost:3000](http://localhost:3000).
 
 ### Electron Wrapper
+
 If you don't like use browser, you can use electron wrapper:
 
-* To run the Electron wrapper
+- To run the Electron wrapper
+
 ```bash
 npm start
 ```
-* Building the Application
+
+- Building the Application
+
 ```bash
 npm run build
 ```
