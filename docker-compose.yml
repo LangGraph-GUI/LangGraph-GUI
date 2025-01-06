@@ -20,6 +20,7 @@ services:
     volumes:
       - ./backend/src/:/app/src/
     environment:
+      - BACKEND_PORT=5000
       - OLLAMA_BASE_URL=http://ollama:13666
     networks:
       - shared-network

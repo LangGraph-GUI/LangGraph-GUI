@@ -20,10 +20,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   * support INFO node
 
 * backend:
-  * change to FastAPI
+  * using FastAPI
   * refractor as llm.py and workflow.py
   * use workspace/undefined, better for multi user is login with nginx auth with name
   * support multi user if using nginx, example at `nginx/nginx.conf`
+  * support change port by env var
 
 * ollama
   * support change port
