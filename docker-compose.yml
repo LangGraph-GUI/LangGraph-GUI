@@ -19,6 +19,8 @@ services:
       - "127.0.0.1:5000:5000"
     volumes:
       - ./backend/src/:/app/src/
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:13666
     networks:
       - shared-network
       - app-network
