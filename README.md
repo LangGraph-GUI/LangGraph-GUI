@@ -8,10 +8,9 @@ For more infomation, please see doc: [LangGraph-GUI.github.io](https://LangGraph
 
 ## Prerequisites
 
-For Docker user, before you start, make sure you have the following software installed on your Linux:
+For Linux user, before you start, make sure you have the following software installed on your Linux:
 
-- Ubuntu related Linux (ex: Mint)
-- Docker Compose Env
+- Docker Compose Environment
 - nv-docker (optional for running ollama)
 - (Optional for electron) npm
 
@@ -39,33 +38,14 @@ docker compose up
 
 Once the containers are up and running, you can access the application at [http://localhost:3000](http://localhost:3000).
 
-### Electron Wrapper
 
-If you don't like use browser, you can use electron wrapper:
+## Contact or Contributing
 
-- To run the Electron wrapper
-
-```bash
-npm start
-```
-
-- Building the Application
-
-```bash
-npm run build
-```
-
-## Contributing
-
-We welcome contributions to LangGraph-GUI-App! If you have any suggestions or find any issues, please open an issue or submit a pull request.
+We welcome contributions to LangGraph-GUI-App! If you have any suggestions or find any bugs, or any questions, feedback, please use [discussion](https://github.com/LangGraph-GUI/LangGraph-GUI/discussions) or [issue](https://github.com/LangGraph-GUI/LangGraph-GUI/issues).
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For questions or feedback, please contact us at [homun@posetmage.com](mailto:homun@posetmage.com).
 
 ---
 
