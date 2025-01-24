@@ -8,9 +8,10 @@ services:
       - ./frontend/src/:/app/src/
       - ./frontend/package.json:/app/package.json
       - ./frontend/tailwind.config.js:/app/tailwind.config.js
-      - ./frontend/postcss.config.js:/app/postcss.config.js
+      - ./frontend/vite.config.ts:/app/vite.config.ts
     networks:
       - shared-network
+    command: npm run dev
 
   backend:
     build:
