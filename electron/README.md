@@ -11,5 +11,5 @@ npm start
 - Building the Application
 
 ```bash
-npm run build
+npm run build-app
 ```

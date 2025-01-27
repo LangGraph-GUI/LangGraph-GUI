@@ -1,25 +1,28 @@
 {
-  "name": "langgraph-gui-app",
-  "version": "0.5.7",
-  "description": "Electron and Docker wrapper for frontend and backend",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
-    "build": "electron-builder"
-  },
-  "build": {
-    "appId": "com.example.myapp",
-    "win": {
-      "icon": "build/icon.ico"
-    }
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "electron": "^31.2.1",
-    "electron-builder": "^24.13.3"
-  }
+    "name": "langgraph-gui-app",
+    "version": "1.1.0",
+    "description": "Electron TypeScript Application",
+    "main": "dist/index.js",
+    "scripts": {
+        "start": "tsc && electron .",
+        "build": "tsc",
+        "watch": "tsc -w",
+        "build-app": "electron-builder"
+
+    },
+    "build": {
+        "appId": "com.example.myapp",
+        "win": {
+          "icon": "build/icon.ico"
+        }
+    },
+    "devDependencies": {
+        "@types/node": "^20.17.16",
+        "electron": "^28.3.3",
+        "electron-builder": "^25.1.8",
+        "typescript": "^5.7.3"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
 }
