@@ -35,6 +35,8 @@ services:
       OLLAMA_HOST: 0.0.0.0:13666
     ports:
       - "127.0.0.1:13666:13666"
+    volumes:
+      - ./ollama/.ollama/:/root/.ollama/
     deploy:
       resources:
         reservations:

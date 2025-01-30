@@ -29,10 +29,16 @@ cd LangGraph-GUI
 
 ### Docker Compose Setup
 
-Build and start the Docker containers:
-
-```bash
+Prepare: Build the Docker containers and pull ollama models :
+```base
 docker compose build
+docker compose up -d ollama
+docker compose exec ollama ollama pull xxxx
+docker compose down
+```
+
+then start 
+```bash
 docker compose up
 ```
 

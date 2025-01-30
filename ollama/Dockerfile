@@ -16,8 +16,8 @@ WORKDIR /app
 COPY ./init_ollama.sh ./init_ollama.sh
 RUN chmod +x ./init_ollama.sh
 
-# Run the init_ollama script during the build
-RUN ./init_ollama.sh
+# Download ollama model
+# RUN ./init_ollama.sh
 
 # Expose the port ollama will use
 # EXPOSE 11434
