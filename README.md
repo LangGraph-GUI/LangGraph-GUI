@@ -32,7 +32,7 @@ cd LangGraph-GUI
 Prepare: Build the Docker containers and pull ollama models :
 ```base
 docker compose build
-docker compose up -d ollama
+docker compose up ollama -d
 docker compose exec ollama ollama pull xxxx
 docker compose down
 ```
