@@ -21,15 +21,19 @@ jobs:
         submodules: 'recursive'  # This will recursively clone submodules
         fetch-depth: 0  # Fetch all history for .GitInfo and .Lastmod
 
+    - name: Get Tag Name
+      id: get_tag
+      run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
     - name: Create zip file
       run: |
-        zip -r ${{ env.BASE_NAME }}.zip ./*
+        zip -r ${{ env.BASE_NAME }}-${{ env.TAG_NAME }}.zip ./*
 
     - name: Upload release asset
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@master
       with:
         name: ${{ env.BASE_NAME }}-code
-        path: ${{ env.BASE_NAME }}.zip
+        path: ${{ env.BASE_NAME }}-${{ env.TAG_NAME }}.zip
 
   release:
     runs-on: ubuntu-latest
@@ -48,12 +52,16 @@ jobs:
         release_id=$(echo $response | jq -r '.id')
         echo "RELEASE_ID=$release_id" >> $GITHUB_ENV
 
+    - name: Get Tag Name
+      id: get_tag
+      run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
     - name: Upload release asset
-      uses: actions/upload-release-asset@v1
+      uses: actions/upload-release-asset@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url: https://uploads.github.com/repos/${{ github.repository }}/releases/${{ env.RELEASE_ID }}/assets?name=${{ env.BASE_NAME }}-${{ github.ref_name }}.zip
-        asset_path: ./code/${{ env.BASE_NAME }}.zip
-        asset_name: ${{ env.BASE_NAME }}-${{ github.ref_name }}.zip
+        upload_url: https://uploads.github.com/repos/${{ github.repository }}/releases/${{ env.RELEASE_ID }}/assets?name=${{ env.BASE_NAME }}-${{ env.TAG_NAME }}.zip
+        asset_path: ./code/${{ env.BASE_NAME }}-${{ env.TAG_NAME }}.zip
+        asset_name: ${{ env.BASE_NAME }}-${{ env.TAG_NAME }}.zip
         asset_content_type: application/zip
