@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest  # or any OS you prefer as we're packaging codebase only
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@latest
       with:
         submodules: 'recursive'  # This will recursively clone submodules
         fetch-depth: 0  # Fetch all history for .GitInfo and .Lastmod
@@ -26,7 +26,7 @@ jobs:
         zip -r ${{ env.BASE_NAME }}.zip ./*
 
     - name: Upload release asset
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.BASE_NAME }}-code
         path: ${{ env.BASE_NAME }}.zip
@@ -36,7 +36,7 @@ jobs:
     needs: package-code
     steps:
     - name: Download code artifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@latest
       with:
         name: ${{ env.BASE_NAME }}-code
         path: code
