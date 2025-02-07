@@ -44,43 +44,6 @@ docker compose up
 
 Once the containers are up and running, you can access the application at [http://localhost:3000](http://localhost:3000).
 
-
-## Kubernetes
-
-### start env
-if minikube
-```bash
-minikube start
-eval $(minikube docker-env)
-```
-
-### Frontend
-build image:
-```bash
-cd frontend
-docker build -t langgraph-gui-frontend:latest . 
-```
-
-create namespace:
-```bash
-cd k8s
-kubectl apply -f namespace.yaml
-```
-
-deploy:
-```bash
-cd k8s
-kubectl apply -f frontend-deployment.yaml
-kubectl get pods -n langgraph-gui
-
-kubectl apply -f ingress.yaml
-kubectl get pods -n ingress-nginx
-curl http://frontend.local
-
-```
-
-
-
 ## Contact or Contributing
 
 We welcome contributions to LangGraph-GUI-App! If you have any suggestions or find any bugs, or any questions, feedback, please use [discussion](https://github.com/LangGraph-GUI/LangGraph-GUI/discussions) or [issue](https://github.com/LangGraph-GUI/LangGraph-GUI/issues).
