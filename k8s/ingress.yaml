@@ -2,14 +2,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: frontend-ingress
+  name: langgraph-gui-ingress
   namespace: langgraph-gui
   annotations:
-    nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true" # Optional: Redirect HTTP to HTTPS
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - yourdomain.com
+    secretName: yourdomain-tls-secret # Reference the Secret we created
   rules:
-  - host: frontend.local
+  - host: yourdomain.com
     http:
       paths:
       - path: /
