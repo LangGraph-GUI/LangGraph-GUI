@@ -20,3 +20,12 @@ spec:
         imagePullPolicy: Always  # Add this line
         ports:
         - containerPort: 3000
+
+        volumeMounts:
+        - name: frontend-src
+          mountPath: /app/
+      volumes:
+      - name: frontend-src
+        hostPath:
+          path: <folder>/LangGraph-GUI/frontend/ # ABSOLUTE PATH HERE
+          type: DirectoryOrCreate

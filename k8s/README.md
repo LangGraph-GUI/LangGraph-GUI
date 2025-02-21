@@ -53,21 +53,20 @@ docker push 127.0.0.1:7000/langgraph-gui-backend:latest
 
 ### deploy by k8s
 ```bash
-kubectl create -f backend-deployment.yaml
-kubectl create -f backend-service.yaml
-kubectl create -f frontend-deployment.yaml
-kubectl create -f frontend-service.yaml
-kubectl get pods -n langgraph-gui
-
-kubectl create -f ingress.yaml
-kubectl get pods -n ingress-nginx
-curl http://frontend.local
-
+kubectl create -f .
 ```
 
-### update
+
+### Debug
+restart:
 ```bash
 kubectl rollout restart deployment/frontend-deployment -n langgraph-gui
 kubectl rollout restart deployment/backend-deployment -n langgraph-gui
 
+```
+
+local test
+```bash
+kubectl port-forward service/frontend-service 3000:3000 -n langgraph-gui
+kubectl port-forward service/backend-service 5000:5000 -n langgraph-gui
 ```
