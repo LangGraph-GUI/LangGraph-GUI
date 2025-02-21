@@ -5,7 +5,7 @@ Hold at server
 
 ### create namespace
 ```bash
-kubectl apply -f namespace.yaml
+kubectl apply -f namespace/langgraph-gui.yaml
 ```
 
 ### prepare for yourdomain.com
@@ -57,10 +57,9 @@ kubectl create -f backend-deployment.yaml
 kubectl create -f backend-service.yaml
 kubectl create -f frontend-deployment.yaml
 kubectl create -f frontend-service.yaml
-kubectl create -f ingress.yaml
 kubectl get pods -n langgraph-gui
 
-kubectl apply -f ingress.yaml
+kubectl create -f ingress.yaml
 kubectl get pods -n ingress-nginx
 curl http://frontend.local
 

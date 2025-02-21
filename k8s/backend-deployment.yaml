@@ -1,4 +1,4 @@
-#backend-deployment.yaml
+# backend-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,6 +17,15 @@ spec:
       containers:
       - name: backend
         image: 127.0.0.1:7000/langgraph-gui-backend:latest
-        imagePullPolicy: Always
+        imagePullPolicy: Always  # Always or IfNotPresent if pushing to a registry
         ports:
-        - containerPort: 5000 # Backend port
+        - containerPort: 5000
+
+        volumeMounts:
+        - name: backend-src
+          mountPath: /app/src/
+      volumes:
+      - name: backend-src
+        hostPath:
+          path: <path>/LangGraph-GUI/backend/src/ # ABSOLUTE PATH HERE
+          type: DirectoryOrCreate

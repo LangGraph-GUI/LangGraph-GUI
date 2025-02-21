@@ -6,7 +6,8 @@ metadata:
   namespace: langgraph-gui
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true" # Optional: Redirect HTTP to HTTPS
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/proxy-buffering: "off"
+    nginx.ingress.kubernetes.io/proxy-cache: "off"
 spec:
   ingressClassName: nginx
   tls:
