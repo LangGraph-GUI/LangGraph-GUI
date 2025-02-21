@@ -1,0 +1,29 @@
+# frontend-ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-frontend
+  namespace: langgraph-gui
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true" # Optional: Redirect HTTP to HTTPS
+    nginx.ingress.kubernetes.io/limit-rps: "1"  # Rate limit: 1 request per second
+    nginx.ingress.kubernetes.io/proxy-buffering: "off"
+    nginx.ingress.kubernetes.io/proxy-cache: "off"
+
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - yourdomain.com
+    secretName: yourdomain-tls-secret # Reference the Secret we created
+  rules:
+  - host: yourdomain.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend-service
+            port:
+              number: 3000

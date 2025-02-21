@@ -44,6 +44,10 @@ docker compose up
 
 Once the containers are up and running, you can access the application at [http://localhost:3000](http://localhost:3000).
 
+### Hold with Kubernetes
+see [/k8s](/k8s)
+
+
 ## Contact or Contributing
 
 We welcome contributions to LangGraph-GUI-App! If you have any suggestions or find any bugs, or any questions, feedback, please use [discussion](https://github.com/LangGraph-GUI/LangGraph-GUI/discussions) or [issue](https://github.com/LangGraph-GUI/LangGraph-GUI/issues).

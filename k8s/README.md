@@ -8,10 +8,10 @@ Hold at server
 kubectl apply -f namespace/langgraph-gui.yaml
 ```
 
-### prepare for yourdomain.com
+### prepare for https
 
 in ```vite.config.ts``` add yourdomain
-```
+```javascript
 allowedHosts: [
     'localhost',
     '127.0.0.1',
@@ -19,7 +19,7 @@ allowedHosts: [
 ],
 ```
 
-prepare ssl key, pem
+use ssl key, pem
 ```bash
 kubectl create secret tls yourdomain-tls-secret \
   --key yourdomain.com.key \

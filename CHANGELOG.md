@@ -5,9 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [1.2.7] - 2025-02-21
+### Feature 
+* Backend
+  * k8s hold at yourdomain.com/backend
+  * tls for backend
+
 ## [1.2.4] - 2025-02-10
-### Frontend
-* k8s can hold at yourdomain.com
+### Feature 
+* Frontend
+  * k8s hold at yourdomain.com
   * tls for frontend
 
 ### TODO:

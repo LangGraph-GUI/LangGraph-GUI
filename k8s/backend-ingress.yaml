@@ -1,8 +1,8 @@
-# ingress.yaml
+# backend-ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: langgraph-gui-ingress
+  name: ingress-backend
   namespace: langgraph-gui
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true" # Optional: Redirect HTTP to HTTPS
@@ -28,10 +28,3 @@ spec:
             name: backend-service
             port:
               number: 5000
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: frontend-service
-            port:
-              number: 3000
