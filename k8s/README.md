@@ -47,10 +47,14 @@ curl -v http://127.0.0.1:7000/v2/_catalog
 docker compose build
 docker tag langgraph-gui-frontend:latest 127.0.0.1:7000/langgraph-gui-frontend:latest
 docker push 127.0.0.1:7000/langgraph-gui-frontend:latest
+docker tag langgraph-gui-backend:latest 127.0.0.1:7000/langgraph-gui-backend:latest
+docker push 127.0.0.1:7000/langgraph-gui-backend:latest
 ```
 
 ### deploy by k8s
 ```bash
+kubectl create -f backend-deployment.yaml
+kubectl create -f backend-service.yaml
 kubectl create -f frontend-deployment.yaml
 kubectl create -f frontend-service.yaml
 kubectl create -f ingress.yaml
@@ -59,5 +63,12 @@ kubectl get pods -n langgraph-gui
 kubectl apply -f ingress.yaml
 kubectl get pods -n ingress-nginx
 curl http://frontend.local
+
+```
+
+### update
+```bash
+kubectl rollout restart deployment/frontend-deployment -n langgraph-gui
+kubectl rollout restart deployment/backend-deployment -n langgraph-gui
 
 ```

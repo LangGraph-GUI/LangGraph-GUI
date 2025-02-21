@@ -17,6 +17,6 @@ spec:
       containers:
       - name: frontend
         image: 127.0.0.1:7000/langgraph-gui-frontend:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always  # Add this line
         ports:
         - containerPort: 3000

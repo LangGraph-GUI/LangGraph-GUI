@@ -6,6 +6,7 @@ metadata:
   namespace: langgraph-gui
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true" # Optional: Redirect HTTP to HTTPS
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   tls:
@@ -16,6 +17,13 @@ spec:
   - host: yourdomain.com
     http:
       paths:
+      - path: /backend(/|$)(.*)  # Moved this path to the top
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: backend-service
+            port:
+              number: 5000
       - path: /
         pathType: Prefix
         backend:

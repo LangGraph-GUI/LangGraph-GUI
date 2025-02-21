@@ -5,11 +5,10 @@ metadata:
   name: backend-service
   namespace: langgraph-gui
 spec:
-  type: NodePort
   selector:
     app: backend
   ports:
     - protocol: TCP
-      port: 5000
-      targetPort: 5000
-      nodePort: 30001  # Choose a different nodePort from the frontend
+      port: 5000  # Service port
+      targetPort: 5000 # Container port
+  type: ClusterIP # Important: Use ClusterIP

@@ -1,0 +1,22 @@
+#backend-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: langgraph-gui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: 127.0.0.1:7000/langgraph-gui-backend:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000 # Backend port
