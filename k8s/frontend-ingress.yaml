@@ -9,7 +9,10 @@ metadata:
     nginx.ingress.kubernetes.io/limit-rps: "1"  # Rate limit: 1 request per second
     nginx.ingress.kubernetes.io/proxy-buffering: "off"
     nginx.ingress.kubernetes.io/proxy-cache: "off"
-
+    # for mime types
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/proxy-hide-header: "Content-Type"
+    nginx.ingress.kubernetes.io/upstream-hash-by: "$request_uri"
 spec:
   ingressClassName: nginx
   tls:
