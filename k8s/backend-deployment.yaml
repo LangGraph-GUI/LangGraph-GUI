@@ -20,6 +20,9 @@ spec:
         imagePullPolicy: Always  # Always or IfNotPresent if pushing to a registry
         ports:
         - containerPort: 5000
+        env:
+          - name: BACKEND_PORT
+            value: "5000"
 
         volumeMounts:
         - name: backend-src
