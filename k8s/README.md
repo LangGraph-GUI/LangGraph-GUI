@@ -58,7 +58,7 @@ kubectl create -f .
 
 ### MIME Types
 if there is mime types error such .css is text/html or plain text
-see [/mime]
+see [mime](./mime)
 
 
 ### Debug
