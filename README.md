@@ -1,6 +1,6 @@
 # LangGraph-GUI
 
-LangGraph-GUI is an user-friendly graphical interface for interacting with reactflow frontend and fastAPI backend using LLM such ollama or other api key.
+LangGraph-GUI is an user-friendly graphical interface for interacting with SvelteFlow frontend and fastAPI backend using LLM such ollama or other api key.
 
 For more infomation, please see doc: [LangGraph-GUI.github.io](https://LangGraph-GUI.github.io)
 
