@@ -49,6 +49,8 @@ docker tag langgraph-gui-frontend:latest 127.0.0.1:7000/langgraph-gui-frontend:l
 docker push 127.0.0.1:7000/langgraph-gui-frontend:latest
 docker tag langgraph-gui-backend:latest 127.0.0.1:7000/langgraph-gui-backend:latest
 docker push 127.0.0.1:7000/langgraph-gui-backend:latest
+docker tag langgraph-gui-ollama:latest 127.0.0.1:7000/langgraph-gui-ollama:latest
+docker push 127.0.0.1:7000/langgraph-gui-ollama:latest
 ```
 
 ### deploy by k8s

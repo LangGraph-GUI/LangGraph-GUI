@@ -23,7 +23,8 @@ spec:
         env:
           - name: BACKEND_PORT
             value: "5000"
-
+          - name: OLLAMA_BASE_URL
+            value: "http://ollama:13666"
         volumeMounts:
         - name: backend-src
           mountPath: /app/src/

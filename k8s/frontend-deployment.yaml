@@ -23,9 +23,9 @@ spec:
 
         volumeMounts:
         - name: frontend-src
-          mountPath: /app/
+          mountPath: /app/src/
       volumes:
       - name: frontend-src
         hostPath:
-          path: <folder>/LangGraph-GUI/frontend/ # ABSOLUTE PATH HERE
+          path: <folder>/LangGraph-GUI/frontend/src/ # ABSOLUTE PATH HERE
           type: DirectoryOrCreate

@@ -1,0 +1,14 @@
+# ollama-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: ollama-service
+  namespace: langgraph-gui
+spec:
+  selector:
+    app: ollama
+  ports:
+    - protocol: TCP
+      port: 13666
+      targetPort: 13666
+  type: ClusterIP

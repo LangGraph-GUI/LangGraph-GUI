@@ -1,0 +1,36 @@
+# ollama-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ollama-deployment
+  namespace: langgraph-gui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ollama
+  template:
+    metadata:
+      labels:
+        app: ollama
+    spec:
+      containers:
+      - name: ollama
+        image: 127.0.0.1:7000/langgraph-gui-ollama:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 13666
+        env:
+        - name: OLLAMA_HOST
+          value: "0.0.0.0:13666"
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+        volumeMounts:
+        - name: ollama-data
+          mountPath: /root/.ollama/
+      volumes:
+      - name: ollama-data
+        hostPath:
+          path: <folder>/ollama/.ollama/
+          type: DirectoryOrCreate
