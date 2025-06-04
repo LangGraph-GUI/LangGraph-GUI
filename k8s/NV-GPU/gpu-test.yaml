@@ -1,0 +1,18 @@
+# gpu-test.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gpu-test
+spec:
+  runtimeClassName: nvidia       # forces NVIDIA runtime so GPU is visible
+  containers:
+    - name: cuda-container
+      image: nvidia/cuda:12.2.0-base-ubuntu22.04
+      command: ["nvidia-smi"]
+      resources:
+        limits:
+          nvidia.com/gpu: 1      # request one GPU
+      env:
+        - name: NVIDIA_DRIVER_CAPABILITIES
+          value: all             # expose all GPU capabilities inside the container
+  restartPolicy: Never

@@ -14,6 +14,9 @@ spec:
       labels:
         app: ollama
     spec:
+      runtimeClassName: nvidia
+      nodeSelector:
+        nvidia.com/gpu.present: "true"  
       containers:
       - name: ollama
         image: 127.0.0.1:7000/langgraph-gui-ollama:latest
@@ -21,6 +24,8 @@ spec:
         ports:
         - containerPort: 13666
         env:
+        - name: NVIDIA_DRIVER_CAPABILITIES
+          value: all             # expose all GPU capabilities inside the container
         - name: OLLAMA_HOST
           value: "0.0.0.0:13666"
         resources:
