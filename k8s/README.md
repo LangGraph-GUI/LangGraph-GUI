@@ -74,7 +74,7 @@ kubectl rollout restart deployment/backend-deployment -n langgraph-gui
 
 ```
 
-local test
+local dev or test
 ```bash
 kubectl port-forward service/frontend-service 3000:3000 -n langgraph-gui
 kubectl port-forward service/backend-service 5000:5000 -n langgraph-gui

@@ -14,7 +14,7 @@ For Linux user, before you start, make sure you have the following software inst
 - nv-docker (optional for running ollama)
 - (Optional for electron) npm
 
-For Windows user, please see [LangGraph GUI Setup on Windows](https://langgraph-gui.github.io/Others/Windows)
+For Windows user, please see [LangGraph GUI Setup on Windows](https://langgraph-gui.github.io/Setup/Windows)
 
 ## Getting Started
 
