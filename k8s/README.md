@@ -63,6 +63,9 @@ if there is mime types error such .css is text/html or plain text
 see [mime](./mime)
 
 
+### NV GPU support
+see [NV-GPU](./NV-GPU)
+
 ### Debug
 restart:
 ```bash
